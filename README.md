@@ -39,11 +39,11 @@ The following command can be used to convert it into UTF-8 and `YYYY-MM-D HH:MM:
     ```
 ## Custom Logs
 
-First you will need a Log Analytics workspace in Azure.    
+First you will need a Log Analytics workspace in Azure. Search for *Log Analytics workspaces* from the Azure home page and create a new workspace.   
 
 ### Link to log files on your PC
 
-Install the Log Analytics agent on your PC
+Install the Log Analytics agent on your PC.
 
 1. Open the Log Analytics workspace and go to *Agents Management*.
 2. Select the Windows servers tabl or the Linux servers tab, depending on the OS where your log files exist.
