@@ -52,3 +52,4 @@ Install the Log Analytics agent on your PC.
 5. Copy the *Workspace ID* and the *Primary key* (which will be used later to link your PC to the Azure Log Analytics workspace).
 6. Install the Log Analytics agent on your PC and input the *Workspace ID* and the *Primary key* in the appropriate fields.
 
+Add custom logs.
