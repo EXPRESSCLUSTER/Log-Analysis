@@ -59,10 +59,7 @@ Add custom logs.
 3. Select one of the log files in the log files folder on your PC as a sample log. Click Next.
 4. The contents of the log file should display in the Preview windows. Choose *New line* as the delimeter. Click Next.
 5. Choose the appropriate OS as the *Type* and then enter the path to the log files.
-    e.g. C:\temp\logfiles\*.log
+    e.g. C:\\temp\\logfiles\\\*.log
     Click Next.
 7. Enter a name for the log file. Note that it will automatically be appended with '\_CL'. Click Next.
 8. Click *Create*.
-
-
-10. 
