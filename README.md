@@ -37,3 +37,18 @@ The following command can be used to convert it into UTF-8 and `YYYY-MM-D HH:MM:
     ```sh
     sed -i -r 's/^(....)\/(..)\/(.. ..:..:..)\./\1-\2-\3 /' userlog.00.utf8.log
     ```
+## Custom Logs
+
+First you will need a Log Analytics workspace in Azure.    
+
+### Link to log files on your PC
+
+Install the Log Analytics agent on your PC
+
+1. Open the Log Analytics workspace and go to *Agents Management*.
+2. Select the Windows servers tabl or the Linux servers tab, depending on the OS where your log files exist.
+3. Expand *Log Analytics agent instructions*.
+4. Download the appropriate agent for your OS.
+5. Copy the *Workspace ID* and the *Primary key* (which will be used later to link your PC to the Azure Log Analytics workspace).
+6. Install the Log Analytics agent on your PC and input the *Workspace ID* and the *Primary key* in the appropriate fields.
+
