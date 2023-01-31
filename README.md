@@ -63,3 +63,15 @@ Add custom logs.
     Click Next.
 7. Enter a name for the log file. Note that it will automatically be appended with '\_CL'. Click Next.
 8. Click *Create*.
+
+## The first step for analysing logs
+
+1. Open the Log Analytics workspace you created and click on *logs* under *General*.
+2. Input the following > `Run`
+    ```KQL
+    search * | where (Type =="TYPE_YOU_SPECIFIED_CL")
+    ```
+    It extracts all the entry in the uploaded log file.
+3. The output like the following can be got. This behavior seems becoming possible after 24 hours from uploading the log file.
+
+    ![ScreenShot_20230131_122743.png](ScreenShot_20230131_122743.png)
