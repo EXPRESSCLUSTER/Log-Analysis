@@ -66,12 +66,33 @@ Add custom logs.
 
 ## The first step for analysing logs
 
-1. Open the Log Analytics workspace you created and click on *logs* under *General*.
-2. Input the following > `Run`
-    ```KQL
-    search * | where (Type =="TYPE_YOU_SPECIFIED_CL")
-    ```
-    It extracts all the entry in the uploaded log file.
-3. The output like the following can be got. This behavior seems becoming possible after 24 hours from uploading the log file.
+Assuming `NODE1_CL` as the Type of the custom log.  
+Open the Log Analytics workspace you created and click on *logs* under *General*.
 
-    ![ScreenShot_20230131_122743.png](ScreenShot_20230131_122743.png)
+### Extracting all the entry
+
+Input the following > `Run`
+
+    ```KQL
+    search * | where (Type =="NODDE1_CL")
+    ```
+    or just run the following
+    ```KQL
+    NODE1_CL
+    ```
+
+The output like the following is got.  
+*This behavior seems becoming possible after 24 hours from uploading the log file.*
+
+![ScreenShot_20230131_122743.png](ScreenShot_20230131_122743.png)
+
+### Extracting ERRORs
+Input the following > `Run`
+
+```KQL
+NODE1_CL
+| extend ERR = extract("(ERROR)", 1, RawData )
+| where ERR == "ERROR"
+| distinct RawData
+```
+![ScreenShot_20230203_125200.png](ScreenShot_20230203_125200.png)
