@@ -37,7 +37,7 @@ The following command can be used to convert it into UTF-8 and `YYYY-MM-D HH:MM:
     ```sh
     sed -i -r 's/^(....)\/(..)\/(.. ..:..:..)\./\1-\2-\3 /' userlog.00.utf8.log
     ```
-Note: The Kusto todatetime() command will return a NULL string if `YYYY/MM/DD HH:MM:SS.ZZZ` time/date format is used. However, if forward slashes are replaced with hyphens in the date/time string, todatetime() seems to work for `YYYY-MM-DD HH:MM:SS.ZZZ`.
+Note: The Kusto todatetime() command will return a NULL string if `YYYY/MM/DD HH:MM:SS.ZZZ` date/time format is used. However, if forward slashes are replaced with hyphens in the date/time string, todatetime() seems to work for `YYYY-MM-DD HH:MM:SS.ZZZ`.
 ## Custom Logs
 
 First you will need a Log Analytics workspace in Azure. Search for *Log Analytics workspaces* from the Azure home page and create a new workspace.   
