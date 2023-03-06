@@ -98,19 +98,19 @@ NODE1_CL
 ```
 ![ScreenShot_20230203_125200.png](ScreenShot_20230203_125200.png)
 
-##Alert Mail
+## Alert Mail
 
-###Create alert rule
+### Create alert rule
 
 1.Select [New alert rule] to create a new alert rule based on the current log query.
 
 2.Set the [Operator] and [Threshold value] in alert logic. An alert is created when this value is true.
 
-3.Click [Add action groups] to add one to the alert rule.Select a Subscription and Resource group for the action group and give it an Action group name that will appear in the portal and a Display name that will appear in email and SMS notifications.
+3.Click [Add action groups] to add one to the alert rule. Select a Subscription and Resource group for the action group and give it an Action group name that will appear in the portal and a Display name that will appear in email and SMS notifications.
 
 4.Configure different settings for the alert rule in the Alert rule details section.(Alert rule name,Description,Severity for the alert,Enable alert upon creation)
 
-###Ploblem
-How to use the alert function.
-Originally, a function that can be notified when an important condition is found in the monitoring data.
-But I can't think of a rule to notify because I just add logs to the custom log all at once.
+### Ploblem
+- How to use the alert function.
+- Originally, a function that can be notified when an important condition is found in the monitoring data.
+- But I can't think of a rule to notify because I just add logs to the custom log all at once.
