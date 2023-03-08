@@ -109,7 +109,7 @@ Log query alert rules create an alert when a log query returns a particular resu
 3. Click [Add action groups] to add one to the alert rule. Select a Subscription and Resource group for the action group and give it an Action group name that will appear in the portal and a Display name that will appear in email and SMS notifications.
 4. Configure different settings for the alert rule in the Alert rule details section.(Alert rule name,Description,Severity for the alert,Enable alert upon creation)
 
-### Ploblem
+### Problem
 - How to use the alert function.
 - Originally, a function that can be notified when an important condition is found in the monitoring data.
 - But I can't think of a rule to notify because I just add logs to the custom log all at once.
