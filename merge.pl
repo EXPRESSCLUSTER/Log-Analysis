@@ -5,16 +5,18 @@
 #
 #	./merge.pl [Time delta] [Log directory] [Head part of log filename]
 #
+#	[Time delta]	Time difference between both nodes in second.
+#
 #	[Head part of log filename]	The string matches to the head part of the file name under the "HOSTNAME/log" directory.
 #
-#	[Log directory] must have the following structure.
+#	[Log directory] Relative path to the directory which has the following structure.
 #
 #	./
 #	├───node-1
 #	│   ├───log
 #	│   :   ├───userlog.00.log
-#	|   :   :
-#	|
+#	│   :   :
+#	│
 #	└───node-2
 #	    ├───log
 #	    :   ├───userlog.00.log
