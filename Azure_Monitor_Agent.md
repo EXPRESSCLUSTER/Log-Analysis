@@ -4,7 +4,5 @@ In order to use Azure Monitor Agent to analyze ECX log files, you will need an A
 2. Log analytics workspace
 3. Custom table
 4. Data Collection Rule
-- Data collection endpoint
-5. 
-7. Alert Rule
-8. 
+     - Data collection endpoint
+5. Alert Rule
