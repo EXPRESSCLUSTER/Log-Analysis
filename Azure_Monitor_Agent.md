@@ -8,3 +8,4 @@ In order to use Azure Monitor Agent to analyze ECX log files, you will first nee
 4. Data Collection Rule
      - Data collection endpoint
 5. Alert Rule
+     - action group
