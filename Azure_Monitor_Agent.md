@@ -9,3 +9,6 @@ In order to use Azure Monitor Agent to analyze ECX log files, you will first nee
      - Data collection endpoint
 5. Alert Rule
      - action group
+
+## On-premises server prep
+Azure Arc needs to be enabled in the on-premises server in order to send log files to Azure monitor. You will need to deploy and configure the Azure Connected Machine agent on your server.
