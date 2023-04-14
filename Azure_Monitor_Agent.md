@@ -4,10 +4,11 @@ This guide details how to set up an Azure Monitor Agent to collect ECX log files
 In order to use Azure Monitor Agent to analyze ECX log files, you will first need an Azure account. Then you will need to create the following resources in Azure:
 1. Resource Group
 2. Log analytics workspace
-3. Custom table
-4. Data Collection Rule
+3. On-premises server prep (download script to run on the VM)
+4. Custom table
+5. Data Collection Rule
      - Data collection endpoint
-5. Alert Rule
+6. Alert Rule
      - action group
 
 ## 1. Resource Group
@@ -56,6 +57,36 @@ Azure Arc needs to be enabled in the on-premises server in order to send log fil
 13.	Verify that this succeeded by returning to the Azure portal and accessing the **Azure Arc – Servers** page. Your server should be listed with the status of _Connected_. Azure Monitor Agent should be installed as an extension of this Azure Arc server resource. The **Azure Connected Machine Agent** will have been installed on your on-premises server.    
 ![Azure Arc Server](images/Installed%20Azure%20Arc%20Server.png)    
 
+## 4. Custom table
+A custom table needs to be created in the Log Analytics workspace for the log data which will be collected. The Data Collection Rule, which will be created later, will channel log file data to this table.
+1.	Copy the code below and change the parameters in the braces to match your Azure environment. This code can be modified to add other columns if needed. Be sure not to add any extra spaces anywhere in the script. You will choose your own TableName (replace the place holder in two places in the script).
+
+```
+    $tableParams = @'
+    {
+       "properties": {
+           "schema": {
+                  "name": "{TableName}_CL",
+                  "columns": [
+           {
+                                   "name": "TimeGenerated",
+                                   "type": "DateTime"
+                           }, 
+                          {
+                                   "name": "RawData",
+                                   "type": "String"
+                          }
+                 ]
+           }
+       }
+    }
+    '@
+
+    Invoke-AzRestMethod -Path "/subscriptions/{subscription}/resourcegroups/{resourcegroup}/providers/microsoft.operationalinsights/workspaces/{WorkspaceName}/tables/{TableName}_CL?api-version=2021-12-01-preview" -Method PUT -payload $tableParams
+```    
+2.	It is easiest to create this table from an **Azure Cloud PowerShell** command line in Azure. From the Azure portal press the **Cloud Shell** button int the top right bar. Then select **PowerShell**. Copy and paste the script and press return to execute the script.
+3.	To verify that the table was made, return to your **Log Analytics workspace** in Azure and click on the **Tables** blade under **Settings**.
+\*Note that this script and instructions were found at the following [Microsoft learn link](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
 
 
 
