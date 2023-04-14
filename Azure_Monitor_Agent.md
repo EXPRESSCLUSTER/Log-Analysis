@@ -50,7 +50,7 @@ Azure Arc needs to be enabled in the on-premises server in order to send log fil
 9.	Click **Download** and review the script execution instructions.
 10.	Click **Close**. 
 11.	Copy the downloaded script to your target server.
-12.	Open an elevated PowerShell windows on your server, change to the directory with the script, and run _**./OnboardingScript.ps1**_.
-\*Note that you may need to change the execution policy in order to run the script. You will be prompted to enter your Azure credentials in order to connect to Azure. An Azure Arc-enabled resource will be created and associated with the agent.
+12.	Open an elevated PowerShell windows on your server, change to the directory with the script, and run _**./OnboardingScript.ps1**_.    
+\*Note that you may need to change the execution policy in order to run the script. The script will prompt you to enter your Azure credentials in order to connect to Azure. An Azure Arc-enabled resource will be created for your server and associated with the agent.
 13.	Verify that this succeeded by returning to the Azure portal and accessing the **Azure Arc – Servers** page. Your server should be listed with the status of _Connected_. Azure Monitor Agent should be installed as an extension of this Azure Arc server resource. The **Azure Connected Machine Agent** will have been installed on your on-premises server.
 
