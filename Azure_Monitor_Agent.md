@@ -35,22 +35,23 @@ Azure Arc needs to be enabled in the on-premises server in order to send log fil
 
 1.	Log into the [Azure Portal](https://portal.azure.com/).
 2.	Search for and select **Servers – Azure Arc**.
-3.	Click on **Add** and choose **Generate a script for a single server** to run on your target server.
-4.	Review the **Prerequisites** page and click **Next**.
-5.	On the **Resource** details tab:
+3.	Click on **Add** and choose **Generate a script for a single server** to run on your target server.    
+     ![../images/Installed_Generate_Script.png](Installed_Generate_Script.png)
+5.	Review the **Prerequisites** page and click **Next**.
+6.	On the **Resource** details tab:
     - Select your **Subscription**.
     - Select the appropriate **Resource Group**.
     - Select the appropriate **Region**.
     - Select the appropriate **Operating system**.
     - Select the appropriate **Connectivity method** (usually Public endpoint).
-6.	Click **Next**.
-7.	On the **Tags** tab:
+7.	Click **Next**.
+8.	On the **Tags** tab:
     - Enter values for the **Physical location tags** (if desired), and any other custom tags as needed.
-8.	Click **Next**.
-9.	Click **Download** and review the script execution instructions.
-10.	Click **Close**. 
-11.	Copy the downloaded script to your target server.
-12.	Open an elevated PowerShell windows on your server, change to the directory with the script, and run _**./OnboardingScript.ps1**_.    
+9.	Click **Next**.
+10.	Click **Download** and review the script execution instructions.
+11.	Click **Close**. 
+12.	Copy the downloaded script to your target server.
+13.	Open an elevated PowerShell windows on your server, change to the directory with the script, and run _**./OnboardingScript.ps1**_.    
 \*Note that you may need to change the execution policy in order to run the script. The script will prompt you to enter your Azure credentials in order to connect to Azure. An Azure Arc-enabled resource will be created for your server and associated with the agent.
 13.	Verify that this succeeded by returning to the Azure portal and accessing the **Azure Arc – Servers** page. Your server should be listed with the status of _Connected_. Azure Monitor Agent should be installed as an extension of this Azure Arc server resource. The **Azure Connected Machine Agent** will have been installed on your on-premises server.
 
