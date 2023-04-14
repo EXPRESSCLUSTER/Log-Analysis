@@ -117,19 +117,23 @@ A Data Collection Rule will define the data collection process in Azure Monitor.
 11.	Click **Next : Resources** and then **Next : Collect and deliver** to continue.
 12.	Click **Add data source**.
 13.	Pull down the drop box under **Data source type** to reveal the options available.
-14.	Select **Custom Text Logs**.
-*Note that if no data collection endpoint was selected earlier, this option will be unavailable.
+![Data Source Type](images/Installed%20Data%20Source%20Type.png)
+14.	Select **Custom Text Logs**.    
+*Note that if no data collection endpoint was created and selected earlier, this option will not be available.
 15.	Enter the following in the Data source window:
-- File pattern: C:\Program Files\EXPRESSCLUSTER\log\userlog*.log
-- Table name: <table name created previously – don’t forget the _CL at the end>
-- Transform: leave as source
-16.	Click Next : Destination.
-17.	Verify that the Destination type is Azure Monitor Logs, your Subscription is selected, and the Account or namespace is set to your Log Analytics workspace.
-18.	Click Add data source.
-The Data source should have Custom Text Logs and the Destination(s) should show Azure Monitor Logs.
-19.	Click Next : Review + Create.
-20.	If everything looks good, click Create.
-21.	Click on Go to resource to view the newly created resource.
+    - **File pattern**: _C:\Program Files\EXPRESSCLUSTER\log\userlog*.log_
+    - **Table name**: <table name created previously – don’t forget the _CL at the end>
+    - **Transform**: leave as _source_
+16.	Click **Next : Destination**.
+17.	Confirm the following:
+    - **Destination type**: Azure Monitor Logs
+    - **Subscription** is correct
+    - **Account or namespace** is set to your **Log Analytics workspace**.
+18.	Click **Add data source**.    
+The **Data source** column should have **Custom Text Logs** and the **Destination(s)** should show **Azure Monitor Logs**.
+19.	Click **Next : Review + Create**.
+20.	If everything looks good, click **Create**.
+21.	Click on **Go to resource** to view the newly created resource.
 
 
 
