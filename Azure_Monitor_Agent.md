@@ -135,6 +135,6 @@ The **Data source** column should have **Custom Text Logs** and the **Destinatio
 20.	If everything looks good, click **Create**.
 21.	Click on **Go to resource** to view the newly created resource.
 
-
+## More coming soon
 
 
