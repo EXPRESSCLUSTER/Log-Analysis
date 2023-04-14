@@ -121,13 +121,13 @@ A Data Collection Rule will define the data collection process in Azure Monitor.
 14.	Select **Custom Text Logs**.    
 *Note that if no data collection endpoint was created and selected earlier, this option will not be available.
 15.	Enter the following in the Data source window:
-    - **File pattern**: _C:\Program Files\EXPRESSCLUSTER\log\userlog*.log_
-    - **Table name**: <table name created previously – don’t forget the _CL at the end>
-    - **Transform**: leave as _source_
+    - **File pattern**: _C:\Program Files\EXPRESSCLUSTER\log\userlog*.log_.
+    - **Table name**: \<_table name created previously_ – don’t forget the *_CL* at the end\>.
+    - **Transform**: leave as _source_.
 16.	Click **Next : Destination**.
 17.	Confirm the following:
-    - **Destination type**: Azure Monitor Logs
-    - **Subscription** is correct
+    - **Destination type**: Azure Monitor Logs.
+    - **Subscription** is correct.
     - **Account or namespace** is set to your **Log Analytics workspace**.
 18.	Click **Add data source**.    
 The **Data source** column should have **Custom Text Logs** and the **Destination(s)** should show **Azure Monitor Logs**.
