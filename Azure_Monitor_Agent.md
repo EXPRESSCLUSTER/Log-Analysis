@@ -36,7 +36,7 @@ Azure Arc needs to be enabled in the on-premises server in order to send log fil
 1.	Log into the [Azure Portal](https://portal.azure.com/).
 2.	Search for and select **Servers – Azure Arc**.
 3.	Click on **Add** and choose **Generate a script for a single server** to run on your target server.    
-     ![../images/Installed_Generate_Script.png](Installed_Generate_Script.png)
+     ![Generate Script](images/Installed%20Generate%20Script.png)
 5.	Review the **Prerequisites** page and click **Next**.
 6.	On the **Resource** details tab:
     - Select your **Subscription**.
