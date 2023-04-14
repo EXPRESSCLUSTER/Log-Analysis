@@ -102,6 +102,7 @@ A Data Collection Rule will define the data collection process in Azure Monitor.
     - Select the **Platform Type** (Windows or Linux).    
   \*Note - A Data Collection Endpoint will be created later. Click **Next : Resources**.
 5.	On the **Resources** tab, click **Add resources**.
+![DCR Resources](images/Installed%20DCR%20Resources.png)
 6.	Expand your resource group to show the Azure Arc enabled servers. Check the boxes next to the servers to include in the scope and click **Apply**.
 7.	Click **Create endpoint**.    
     \*Note that an endpoint is needed for Custom Text Logs. 
@@ -114,9 +115,9 @@ A Data Collection Rule will define the data collection process in Azure Monitor.
 9.	Select the **Data collection endpoint** just created in the new column for each server.
 10.	Return to the **Basics** tab and select the **Data Collection Endpoint** just created.
 11.	Click **Next : Resources** and then **Next : Collect and deliver** to continue.
-12.	Click Add data source.
-13.	Pull down the drop box under Data source type to reveal the options available.
-14.	Select Custom Text Logs.
+12.	Click **Add data source**.
+13.	Pull down the drop box under **Data source type** to reveal the options available.
+14.	Select **Custom Text Logs**.
 *Note that if no data collection endpoint was selected earlier, this option will be unavailable.
 15.	Enter the following in the Data source window:
 - File pattern: C:\Program Files\EXPRESSCLUSTER\log\userlog*.log
