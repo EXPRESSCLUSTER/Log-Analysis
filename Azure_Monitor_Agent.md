@@ -86,8 +86,8 @@ A custom table needs to be created in the Log Analytics workspace for the log da
 ```    
 2.	It is easiest to create this table from an **Azure Cloud PowerShell** command line in Azure. From the Azure portal press the **Cloud Shell** button int the top right bar. Then select **PowerShell**. Copy and paste the script and press return to execute the script.
 3.	To verify that the table was made, return to your **Log Analytics workspace** in Azure and click on the **Tables** blade under **Settings**.    
-\*Note that this script and instructions were found at the following [Microsoft learn link](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
-
+\*Note that this script and instructions were found at the following [Microsoft learn link](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).    
+![Log Analytics Workspace Table](images/Installed%20Tables.png)
 
 
 
