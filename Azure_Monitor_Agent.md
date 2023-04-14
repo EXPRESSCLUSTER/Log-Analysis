@@ -89,6 +89,46 @@ A custom table needs to be created in the Log Analytics workspace for the log da
 \*Note that this script and instructions were found at the following [Microsoft learn link](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).    
 ![Log Analytics Workspace Table](images/Installed%20Tables.png)
 
+## 5. Data Collection Rule
+A Data Collection Rule will define the data collection process in Azure Monitor. It specifies what will be collected, where to send the data, and how it will be transformed. The instructions for the following rule will collect ECX custom logs from on-premises ECX servers.
+1.	Search for **Monitor** in the Azure portal to access the **Monitor** menu.
+2.	Click on **Data Collection Rules** in the left blade under **Settings**.
+3.	Select **Create**.
+4.	On the **Basics** tab:
+    - Enter a unique **Rule Name** for this rule.
+    - Select your **Subscription**.
+    - Select the **Resource Group** created earlier.
+    - Delect the correct **Region**.
+    - Select the **Platform Type** (Windows or Linux).    
+  \*Note - A Data Collection Endpoint will be created later. Click **Next : Resources**.
+5.	On the **Resources** tab, click **Add resources**.
+6.	Expand your resource group to show the Azure Arc enabled servers. Check the boxes next to the servers to include in the scope and click **Apply**.
+7.	Click **Create endpoint**.    
+    \*Note that an endpoint is needed for Custom Text Logs. 
+    - enter a unique Endpoint Name
+    - select your Subscription
+    - select the Resource Group created earlier
+    - select the same Region as used previously    
+    Click **Review + Create**. Click **Create**.
+8.	Check the box next to **Enable Data Collection Endpoints** to show the **Data Collection Endpoint Column** in the lower table.
+9.	Select the **Data collection endpoint** just created in the new column for each server.
+10.	Return to the **Basics** tab and select the **Data Collection Endpoint** just created.
+11.	Click **Next : Resources** and then **Next : Collect and deliver** to continue.
+12.	Click Add data source.
+13.	Pull down the drop box under Data source type to reveal the options available.
+14.	Select Custom Text Logs.
+*Note that if no data collection endpoint was selected earlier, this option will be unavailable.
+15.	Enter the following in the Data source window:
+- File pattern: C:\Program Files\EXPRESSCLUSTER\log\userlog*.log
+- Table name: <table name created previously – don’t forget the _CL at the end>
+- Transform: leave as source
+16.	Click Next : Destination.
+17.	Verify that the Destination type is Azure Monitor Logs, your Subscription is selected, and the Account or namespace is set to your Log Analytics workspace.
+18.	Click Add data source.
+The Data source should have Custom Text Logs and the Destination(s) should show Azure Monitor Logs.
+19.	Click Next : Review + Create.
+20.	If everything looks good, click Create.
+21.	Click on Go to resource to view the newly created resource.
 
 
 
