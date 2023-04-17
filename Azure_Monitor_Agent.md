@@ -146,12 +146,16 @@ The **Data source** column should have **Custom Text Logs** and the **Destinatio
 \*Note that all of the log entries collected over that time period will display, including “INFO” events.
  ![Basic Log Query](images/Azure%20Monitor%20Basic%20Log%20Query.png)
 7.	Enter the following query to view organized error events:
+```
 <log_name>_CL
 | where RawData contains "ERROR"
 | order by TimeGenerated asc 
 | project TimeGenerated, ComputerName=tostring(split(_ResourceId, "/")[-1]), RawData
- 
-*Note that ‘contains_cs’ will perform a case sensitive query.
+```
+![Query for ERROR](images/Azure%20Monitor%20Log%20Query%20for%20ERROR.png)
+\*Note that changing _contains_ to _contains_cs_ will perform a case sensitive query.
+
+
 
 
 
