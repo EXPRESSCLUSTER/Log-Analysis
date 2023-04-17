@@ -229,6 +229,13 @@ The notifications in the top right will show when the new rule has been successf
     clplogcmd -m "Test error occurred. Logging now." -l ERROR
 ```
 4.	Wait for approximately 5 minutes for an email to arrive with an error alert message.
-5.	Click on **View the alert in Azure Monitor** to view details in Azure.
-
+5.	Click on **View the alert in Azure Monitor** to view details in Azure.    
+### Emailed Alert Sample
+![Emailed Alert Sample](images/Email%20Alert.png)
+### Alert Details
+![Alert Details](images/Alert%20Details.png)
+### New Alert in Alerts
+![New Alert in Alerts](images/Alert%20Logged.png)
+### New Alert Query in Logs
+![New Alert Query in Logs](images/Alerted%20Error%20in%20Log.png)
 
