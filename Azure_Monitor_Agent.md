@@ -155,6 +155,64 @@ The **Data source** column should have **Custom Text Logs** and the **Destinatio
 ![Query for ERROR](images/Azure%20Monitor%20Log%20Query%20for%20ERROR.png)
 \*Note that changing _contains_ to _contains_cs_ will perform a case sensitive query.
 
+## Alert Rule
+Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to notify the ECX administrator when error messages are logged.
+1.	Search for **Monitor** in the Azure portal to access the **Monitor** menu.
+2.	Click on **Alerts** in the left blade.
+3.	Click **Create -> Alert rule**.
+4.	At the **Scope** tab a window called **Select a resource** should automatically pop up. Expand your **Resource group** and put a check next to your **Log Analytics workspace**. Click **Apply**.
+
+5.	Click **Next : Conditions**.
+6.	Set the following for the Condition tab:
+- Signal name: Custom log search
+  *Note that this will expand more options
+- Search query: 
+   <table name_CL> 
+   | where RawData contains "ERROR"
+   *Note that you can test this query. If it does not return any results, adjust the Time range. Click Continue Editing Alert to close this window.
+- Measurement: leave Measure set to Table rows, Aggregation type set to Count, and Aggregation granularity set to 5 minutes.
+- Split by dimensions 
+    - Resource ID column: leave set to _ResourceId.
+- Alert logic
+    - Operator: Greater than
+    - Threshold value: 0
+    - Frequency of evaluation: 5 minutes
+Leave the other settings as default values and click Next : Actions.
+7.	Click Create action group under the Actions tab.
+*Note that the action group tells Azure what to do when an alert is received.
+8.	Enter the following values on the Basics tab:
+- select your Subscription
+- select the appropriate Resource Group
+- select the appropriate Region
+- enter a unique name for the Action group name
+- the Display name will show up in notifications. Change it if you like.
+9.	Click Next : Notifications.
+10.	Choose the following on the Notifications tab:
+- Notification type: Email/SMS message/Push/Voice
+- Name: a name of your choice
+*Note - If a popup window did not appear for to allow you to ‘Add or edit Email/SMS message/Push/Voice action’, click on the pencil icon.
+- Check the box next to Email and enter the email address to receive notification.
+- Select Yes to enable the common alert schema and click OK.
+11.	Click Next : Actions.
+12.	The settings on the Actions tab do not need to be modified. They may be used for more advanced actions if needed such as web hooks Azure functions Logic Apps.
+13.	Click Next : Tags and add any tags as needed.
+14.	Click Next : Review + Create.
+15.	If everything looks good, click Create.
+The action group just created should be listed under Action group name.
+16.	Click Next : Details.
+17.	On the Details tab, modify the following as needed:
+- select your Subscription
+- select the appropriate Resource Group
+- Severity: 1 – Error
+- Alert rule name: a name of your choice
+- Alert rule description: description is optional
+- select the appropriate Region
+- Advanced options -> Custom properties (if desired)
+18.	Click Next : Tags.
+19.	Add any tag values and click Next : Review + create.
+20.	Click Create.
+The new rule will show in the list of alert rules and be enabled.
+*Note that the Monitor – Alerts page shows the alerts that have been fired within the selected time frame. Click Alert rules to view and edit alert rules.
 
 
 
