@@ -232,9 +232,9 @@ The notifications in the top right will show when the new rule has been successf
 5.	Click on **View the alert in Azure Monitor** to view details in Azure.    
 ### Emailed Alert Sample
 ![Emailed Alert Sample](images/Email%20Alert.png)
-### Alert Details
+### New Alert Details in Azure
 ![Alert Details](images/Alert%20Details.png)
-### New Alert in Alerts
+### New Alert in Monitor Alerts
 ![New Alert in Alerts](images/Alert%20Logged.png)
 ### New Alert Query in Logs
 ![New Alert Query in Logs](images/Alerted%20Error%20in%20Log.png)
