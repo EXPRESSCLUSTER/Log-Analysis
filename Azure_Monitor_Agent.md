@@ -171,6 +171,7 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
     <table name_CL> 
     | where RawData contains "ERROR"
     ```   
+    ![Alert Log Query](images/Installed%20Alert%20Log%20Query.png)
     \*Note that you can test this query. If it does not return any results, adjust the **Time range**. Click **Continue Editing Alert** to close this window.
 - Measurement: leave Measure set to Table rows, Aggregation type set to Count, and Aggregation granularity set to 5 minutes.
 - Split by dimensions 
