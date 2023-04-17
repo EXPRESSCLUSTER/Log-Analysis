@@ -202,20 +202,21 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
 14.	Click **Next : Review + Create**.
 15.	If everything looks good, click **Create**.    
 The action group just created should be listed under **Action group name**.
-16.	**Click Next : Details**.
-17.	On the Details tab, modify the following as needed:
-- select your Subscription
-- select the appropriate Resource Group
-- Severity: 1 – Error
-- Alert rule name: a name of your choice
-- Alert rule description: description is optional
-- select the appropriate Region
-- Advanced options -> Custom properties (if desired)
-18.	Click Next : Tags.
-19.	Add any tag values and click Next : Review + create.
-20.	Click Create.
-The new rule will show in the list of alert rules and be enabled.
-*Note that the Monitor – Alerts page shows the alerts that have been fired within the selected time frame. Click Alert rules to view and edit alert rules.
+![Action Group Created](images/Installed%20Action%20Group%20Created.png)
+16.	Click **Next : Details**.
+17.	On the **Details** tab, modify the following as needed:
+    - Select your **Subscription**.
+    - Select the appropriate **Resource Group**.
+    - **Severity**: **1 – Error**
+    - **Alert rule name**: a name of your choice.
+    - **Alert rule description**: description is optional.
+    - Select the appropriate **Region**.
+    - **Advanced options** -> set **Custom properties** (if desired).
+18.	Click **Next : Tags**.
+19.	Add any tag values and click **Next : Review + create**.
+20.	Click **Create**.
+The new rule will show in the list of alert rules and be enabled.    
+\*Note that the Monitor – Alerts page shows the alerts that have been fired within the selected time frame. Click **Alert rules** to view and edit alert rules.
 
 
 
