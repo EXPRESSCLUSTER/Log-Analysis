@@ -164,12 +164,14 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
 ![Select a Resource](images/Installed%20Select%20a%20resource.png)
 5.	Click **Next : Conditions**.
 6.	Set the following for the Condition tab:
-- Signal name: Custom log search
-  *Note that this will expand more options
-- Search query: 
-   <table name_CL> 
-   | where RawData contains "ERROR"
-   *Note that you can test this query. If it does not return any results, adjust the Time range. Click Continue Editing Alert to close this window.
+    - Signal name: Custom log search    
+      *Note that this will expand more options
+    - Search query: 
+    ```
+    <table name_CL> 
+    | where RawData contains "ERROR"
+    ```   
+    \*Note that you can test this query. If it does not return any results, adjust the **Time range**. Click **Continue Editing Alert** to close this window.
 - Measurement: leave Measure set to Table rows, Aggregation type set to Count, and Aggregation granularity set to 5 minutes.
 - Split by dimensions 
     - Resource ID column: leave set to _ResourceId.
