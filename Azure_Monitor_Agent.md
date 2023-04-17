@@ -161,7 +161,7 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
 2.	Click on **Alerts** in the left blade.
 3.	Click **Create -> Alert rule**.
 4.	At the **Scope** tab a window called **Select a resource** should automatically pop up. Expand your **Resource group** and put a check next to your **Log Analytics workspace**. Click **Apply**.
-
+![Select a Resource](images/Installed%20Select%20a%20resource.png)
 5.	Click **Next : Conditions**.
 6.	Set the following for the Condition tab:
 - Signal name: Custom log search
