@@ -216,8 +216,9 @@ The action group just created should be listed under **Action group name**.
 19.	Add any tag values and click **Next : Review + create**.
 20.	Click **Create**.    
 The notifications in the top right will show when the new rule has been successfully created. However, you will be brought back to the main alerts page which shows the alerts that have been fired within the selected time frame.    
-\*Note that the Monitor – Alerts page shows the alerts that have been fired within the selected time frame. Click **Alert rules** to view and edit alert rules. new rule will show in the list of alert rules and be enabled.    
-
+![Alerts Page](images/Installed%20Alerts%20Page.png)
+\*Click **Alert rules** to view and edit alert rules. New rules will show in the list of alert rules and be enabled.    
+![Alert Rule List](images/Installed%20Alert%20Rule%20Created.png)
 
 
 
