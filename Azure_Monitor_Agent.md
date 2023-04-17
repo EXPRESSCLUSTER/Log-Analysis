@@ -140,10 +140,11 @@ The **Data source** column should have **Custom Text Logs** and the **Destinatio
 2.	Click on **Logs** in the left blade.
 3.	Close the **Queries** popup window.
 4.	Click **Select scope** in the upper left, expand your **Resource group**, select your **Log Analytics workspace**, and click **Apply**.
+![Select a Scope](images/Installed%20Select%20a%20scope.png)
 5.	Enter the name of your custom log file in the query window. You can expand the **Custom Logs** list if you need help remembering it. Click **Run**.
 6.	If you have given the system enough time to collect logs and nothing is displayed for the default **Last 24 hours** period, change the **Time range** to a longer period and try again.    
 \*Note that all of the log entries collected over that time period will display, including “INFO” events.
- 
+ ![Basic Log Query](images/Azure%20Monitor%20Basic%20Log%20Query.png)
 7.	Enter the following query to view organized error events:
 <log_name>_CL
 | where RawData contains "ERROR"
