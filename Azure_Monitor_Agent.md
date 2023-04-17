@@ -163,46 +163,46 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
 4.	At the **Scope** tab a window called **Select a resource** should automatically pop up. Expand your **Resource group** and put a check next to your **Log Analytics workspace**. Click **Apply**.
 ![Select a Resource](images/Installed%20Select%20a%20resource.png)
 5.	Click **Next : Conditions**.
-6.	Set the following for the Condition tab:
-    - Signal name: Custom log search    
-      *Note that this will expand more options
-    - Search query: 
+6.	Set the following for the **Condition** tab:
+    - **Signal name**: **Custom log search**    
+      *Note that this will expand more options.
+    - **Search query**: 
     ```
     <table name_CL> 
     | where RawData contains "ERROR"
     ```   
     ![Alert Log Query](images/Installed%20Alert%20Log%20Query.png)
     \*Note that you can test this query. If it does not return any results, adjust the **Time range**. Click **Continue Editing Alert** to close this window.
-- Measurement: leave Measure set to Table rows, Aggregation type set to Count, and Aggregation granularity set to 5 minutes.
-- Split by dimensions 
-    - Resource ID column: leave set to _ResourceId.
-- Alert logic
-    - Operator: Greater than
-    - Threshold value: 0
-    - Frequency of evaluation: 5 minutes
-Leave the other settings as default values and click Next : Actions.
-7.	Click Create action group under the Actions tab.
-*Note that the action group tells Azure what to do when an alert is received.
-8.	Enter the following values on the Basics tab:
-- select your Subscription
-- select the appropriate Resource Group
-- select the appropriate Region
-- enter a unique name for the Action group name
-- the Display name will show up in notifications. Change it if you like.
-9.	Click Next : Notifications.
-10.	Choose the following on the Notifications tab:
-- Notification type: Email/SMS message/Push/Voice
-- Name: a name of your choice
-*Note - If a popup window did not appear for to allow you to ‘Add or edit Email/SMS message/Push/Voice action’, click on the pencil icon.
-- Check the box next to Email and enter the email address to receive notification.
-- Select Yes to enable the common alert schema and click OK.
-11.	Click Next : Actions.
-12.	The settings on the Actions tab do not need to be modified. They may be used for more advanced actions if needed such as web hooks Azure functions Logic Apps.
-13.	Click Next : Tags and add any tags as needed.
-14.	Click Next : Review + Create.
-15.	If everything looks good, click Create.
-The action group just created should be listed under Action group name.
-16.	Click Next : Details.
+    - **Measurement**: leave **Measure** set to **Table rows**, **Aggregation type** set to **Count**, and **Aggregation granularity** set to **5 minutes**.
+    - **Split by dimensions**    
+      \- **Resource ID column**: leave set to __ResourceId_.
+    - **Alert logic**    
+    \- **Operator**: **Greater than**    
+    \- **Threshold value**: **0**    
+    \- **Frequency of evaluation**: **5 minutes**    
+    Leave the other settings as default values and click **Next : Actions**.
+7.	Click **Create action group** under the **Actions** tab.    
+    \*Note that the action group tells Azure what to do when an alert is received.
+8.	Enter the following values on the **Basics** tab:
+    - Select your **Subscription**.
+    - Select the appropriate **Resource Group**.
+    - Select the appropriate **Region**.
+    - Enter a unique name for the **Action group name**.
+    - The **Display name** will show up in all notifications. Change it from the default name if you like.
+9.	Click **Next : Notifications**.
+10.	Choose the following on the **Notifications** tab:
+    - **Notification type**: **Email/SMS message/Push/Voice**
+    - **Name**: a name of your choice    
+    \*Note - If a popup window did not appear for to allow you to _Add or edit Email/SMS message/Push/Voice action_, click on the pencil icon.
+    - Check the box next to **Email** and enter the email address to receive notification.
+    - Select **Yes** to enable the **common alert schema** and click **OK**.
+11.	Click **Next : Actions**.
+12.	The settings on the **Actions** tab do not need to be modified. They may be used for more advanced actions if needed such as web hooks, Azure functions, and Logic Apps.
+13.	Click **Next : Tags** and add any tags as needed.
+14.	Click **Next : Review + Create**.
+15.	If everything looks good, click **Create**.    
+The action group just created should be listed under **Action group name**.
+16.	**Click Next : Details**.
 17.	On the Details tab, modify the following as needed:
 - select your Subscription
 - select the appropriate Resource Group
