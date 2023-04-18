@@ -222,14 +222,16 @@ The notifications in the top right will show when the new rule has been successf
 ![Alert Rule List](images/Installed%20Alert%20Rule%20Created.png)
 
 ## Test the Alert Rule
-1.	Log into one of your ECX VMs.
-2.	Open an elevated command prompt with Admin rights.
-3.	Enter the following command and press **Enter**:
+1.	Log into the standby node of your ECX cluster.
+2.	Disable the network adapter for at least 30 seconds.
+3.	Alternately, you can create your own error message. (Skip to step 6 if you have already disabled the network adapter.)
+4.	Open an elevated command prompt with Admin rights.
+5.	Enter the following command and press **Enter**:
 ```
     clplogcmd -m "Test error occurred. Logging now." -l ERROR
 ```
-4.	Wait for approximately 5 minutes for an email to arrive with an error alert message.
-5.	Click on **View the alert in Azure Monitor** to view details in Azure.    
+6.	Wait for approximately 5 minutes for an email to arrive with an error alert message.
+7.	Click on **View the alert in Azure Monitor** to view details in Azure.    
 ### Emailed Alert Sample
 ![Emailed Alert Sample](images/Email%20Alert.png)
 ### New Alert Details in Azure
