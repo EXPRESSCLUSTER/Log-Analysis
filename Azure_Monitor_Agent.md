@@ -194,10 +194,10 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
     - **Notification type**: **Email/SMS message/Push/Voice**
     - **Name**: a name of your choice    
     \*Note - If a popup window did not appear for to allow you to _Add or edit Email/SMS message/Push/Voice action_, click on the pencil icon.
-    - Check the box next to **Email** and enter the email address to receive notification.
+    - Check the box next to **Email** and enter the email address to receive notifications.
     - Select **Yes** to enable the **common alert schema** and click **OK**.
 11.	Click **Next : Actions**.
-12.	The settings on the **Actions** tab do not need to be modified. They may be used for more advanced actions if needed such as web hooks, Azure functions, and Logic Apps.
+12.	The settings on the **Actions** tab do not need to be modified. They may be used for more advanced actions if needed, such as webhooks, Azure functions, and Logic Apps.
 13.	Click **Next : Tags** and add any tags as needed.
 14.	Click **Next : Review + Create**.
 15.	If everything looks good, click **Create**.    
