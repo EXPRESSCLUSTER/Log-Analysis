@@ -4,7 +4,7 @@ This guide details how to set up an Azure Monitor Agent to collect ECX log files
 In order to use Azure Monitor Agent to analyze ECX log files, you will first need an Azure account. Then you will need to create the following resources in Azure:
 1. Resource Group
 2. Log analytics workspace
-3. On-premises server prep (download script to run on the VM)
+3. On-premises server script (download script to run on the VM)
 4. Custom table
 5. Data Collection Rule
      - Data collection endpoint
