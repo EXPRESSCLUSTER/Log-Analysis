@@ -12,7 +12,7 @@ In order to use Azure Monitor Agent to analyze ECX log files, you will first nee
      - action group
 
 ## 1. Resource Group
-Log into the [Azure Portal](https://portal.azure.com/) and create a **Resource Group** for *Azure log analytics*.
+Log into the [Azure Portal](https://portal.azure.com/) and create a **Resource Group** for this solution.
 1.	Search for and select **Resource groups**.
 2.	Click **Create**.
     - Select your **Subscription**.
