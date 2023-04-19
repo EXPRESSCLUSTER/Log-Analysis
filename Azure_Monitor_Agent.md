@@ -269,3 +269,4 @@ Workbooks are also a good resource to use to view log data in a clean interface.
 10. Click **Apply**.
 11. Click **Done Editing**.    
 This workbook can be pinned for easy access and will automatically update as new log events are captured, with no need to run the query when it is opened. If there are no results in the windows, edit the Time Range.
+![Workbook](images/Installed%20Workbook.png)
