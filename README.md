@@ -113,3 +113,7 @@ Log query alert rules create an alert when a log query returns a particular resu
 - How to use the alert function.
 - Originally, a function that can be notified when an important condition is found in the monitoring data.
 - But I can't think of a rule to notify because I just add logs to the custom log all at once.
+
+## Methods to analyze ECX log files in Azure
+
+1. 
