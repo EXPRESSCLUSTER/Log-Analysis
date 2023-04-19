@@ -249,17 +249,17 @@ Workbooks are also a good resource to use to view log data in a clean interface.
 3.	Create a new workbook by clicking **New**.
 4.	Click **Add** -> **Add query**.
 5.	Set the following parameters:
-   - **Data source**: **Logs**
-   - **Resource type**: **Log Analytics**
-   - **Log Analytics workspace**: click **Load all subscriptions**
+    - **Data source**: **Logs**
+    - **Resource type**: **Log Analytics**
+    - **Log Analytics workspace**: click **Load all subscriptions**
     Click your subscription
-   - **Time Range**: leave at default **Last 24 hours** or change to a longer period
-   - **Size**: leave visualization size at default **Medium** or change
-   - Log Analytics workspace Logs Query: enter the following
+    - **Time Range**: leave at default **Last 24 hours** or change to a longer period
+    - **Size**: leave visualization size at default **Medium** or change
+    - Log Analytics workspace Logs Query: enter the following
 6. Click **Run Query**.
-7. Click on Advanced Settings and change the **Step name** and **Chart title** to something more meaningful.
+7. Click on **Advanced Settings** and change the **Step name** and **Chart title** to something more meaningful.
 8. Click the **Save** icon.
 9. At the **Save As** window, enter a meaningful **Title**, **Resource group**, and **Location**.
 10. Click **Apply**.
 11. Click **Done Editing**.    
-This workbook can be pinned for easy access. This workbook will automatically update as new log events are captured with no need to run the query when it is opened. If there are no results in the windows, edit the Time Range.
+This workbook can be pinned for easy access and will automatically update as new log events are captured, with no need to run the query when it is opened. If there are no results in the windows, edit the Time Range.
