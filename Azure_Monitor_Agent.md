@@ -1,5 +1,5 @@
-# Azure Log Analytics with Azure Monitor Agent
-This guide details how to set up an Azure Monitor Agent to collect ECX log files from on-premises Windows server nodes, monitor them for error events, and send email alerts when errors are detected. Note that since the legacy Log Analytics agent will be deprecated by August 2024, the Azure Monitor agent is used here. This guide details how to set this up for ECX VM nodes in an on-premises environment.    
+# Azure Log Analytics with Azure Arc-enabled servers and Azure Monitor Agent
+This guide details how to set up Azure Monitor to collect ECX log files from on-premises Windows VM server nodes, monitor them for error events, and send email alerts when errors are detected. Note that since the legacy Log Analytics agent will be deprecated by August 2024, the Azure Monitor agent is used here. This guide details how to set this up for ECX VM nodes in an on-premises environment.    
 
 In order to use Azure Monitor Agent to analyze ECX log files, you will first need an Azure account. Then you will need to create the following resources in Azure:
 1. Resource Group
@@ -32,7 +32,7 @@ Log into the [Azure Portal](https://portal.azure.com/) and create a **Resource G
 
 ## 4. On-premises server prep
 
-Azure Arc needs to be enabled in the on-premises server in order to send log files to Azure monitor. You will need to deploy and configure the **Azure Connected Machine agent** on your server. The simplest way to do this is to download a script to automate this process. This script will also download and install the **connected machine agent** and then connect to **Azure Arc**.    
+Azure Arc needs to be enabled in the on-premises server in order to send log files to Azure monitor. You will need to deploy and configure the **Azure Connected Machine agent** on your server and then connect to Azure. This can be done manually, but the simplest way to do this is to download a script to automate this process. This script will download and install the **connected machine agent** and then connect to the **Azure Monitor Agent** extension under **Azure Arc**.    
 
 1.	Log into the [Azure Portal](https://portal.azure.com/).
 2.	Search for and select **Servers – Azure Arc**.
