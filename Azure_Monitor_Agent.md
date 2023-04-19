@@ -255,7 +255,13 @@ Workbooks are also a good resource to use to view log data in a clean interface.
     Click your subscription
     - **Time Range**: leave at default **Last 24 hours** or change to a longer period
     - **Size**: leave visualization size at default **Medium** or change
-    - Log Analytics workspace Logs Query: enter the following
+    - **Log Analytics workspace Logs Query**: enter the following
+      ```
+      <Tablename>_CL
+      | where RawData contains "ERROR"
+      | order by TimeGenerated desc 
+      | project TimeGenerated, RawData, _ResourceId
+      ```
 6. Click **Run Query**.
 7. Click on **Advanced Settings** and change the **Step name** and **Chart title** to something more meaningful.
 8. Click the **Save** icon.
