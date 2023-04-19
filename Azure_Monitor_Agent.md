@@ -242,7 +242,7 @@ The notifications in the top right will show when the new rule has been successf
 ![New Alert Query in Logs](images/Alerted%20Error%20in%20Log.png)
 
 ## Addendum
-Workbooks are also a good resource to use to view log data in a clean interface. Logged events can easily be redirected to workbooks with queries to organize the data.
+Workbooks are also a good resource to use to view log data in a clean interface. Multiple logged events (from different tables, if desired) can easily be redirected to workbooks, with queries to organize the data.
 ### Create a Workbook for ECX Log Data
 1.	Search for **Monitor** in the Azure portal to access the **Monitor** menu.
 2.	Click on **Workbooks** in the left blade.
