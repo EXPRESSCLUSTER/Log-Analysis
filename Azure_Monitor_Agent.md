@@ -197,13 +197,13 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
     - Check the box next to **Email** and enter the email address to receive notifications.
     - Select **Yes** to enable the **common alert schema** and click **OK**.
 11.	Click **Next : Actions**.
-12.	The settings on the **Actions** tab do not need to be modified. They may be used for more advanced actions if needed, such as webhooks, Azure functions, and Logic Apps.
+12.	The settings on the **Actions** tab do not need to be modified. They may be used for more advanced actions if needed, such as `webhooks`, `Azure functions`, and `Logic Apps`.
 13.	Click **Next : Tags** and add any tags as needed.
 14.	Click **Next : Review + Create**.
 15.	If everything looks good, click **Create**.    
 The action group just created should be listed under **Action group name**.
 ![Action Group Created](images/Installed%20Action%20Group%20Created.png)
-16.	Click **Next : Details**.
+16.	Click **Next : Details** to continue creating the alert rule.
 17.	On the **Details** tab, modify the following as needed:
     - Select your **Subscription**.
     - Select the appropriate **Resource Group**.
