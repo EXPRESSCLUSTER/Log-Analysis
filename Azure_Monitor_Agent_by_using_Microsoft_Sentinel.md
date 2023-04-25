@@ -23,3 +23,8 @@ Depending on the application, you can select the content of the event to be acqu
 Please refer to the [official document](https://learn.microsoft.com/ja-jp/azure/sentinel/windows-security-event-id-reference) for details.
 
 ## 6. Create
+After setting the parameters, the Azure Monitor agent will be deployed in a few minutes, and you can check the Windows Security Event Log.
+
+# Alert Mail with Microsoft Teams by using Microsoft Sentinel
+
+## 1.
