@@ -275,3 +275,28 @@ Workbooks are also a good resource to use to view log data in a clean interface.
 11. Click **Done Editing**.    
 This workbook can be pinned for easy access and will automatically update as new log events are captured, with no need to run the query when it is opened. If there are no results in the windows, edit the Time Range. Take advantage of the functionality that [workbooks](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview) provide.
 ![Workbook](images/Installed%20Workbook.png)
+
+### Parse User*.log contents into columns
+Here is a sample Kust query which can parse the ECX User*.log file into columns from a table. It shows how the line is broken up with each step.    
+Raw data input example:     `2023/01/20 16:34:51.571  00000d40 00000d9c INFO  [cmd  ] clpcl.exe : 0 : Command succeeded.`    
+```
+ECXUserLog_CL
+| extend part1 = split(RawData, ' [')                                      2023/01/20 16:34:51.571  00000d40 00000d9c INFO ,cmd  ] clpcl.exe : 0 : Command succeeded.
+| extend part2 = part1[0]                                                  2023/01/20 16:34:51.571  00000d40 00000d9c INFO
+| extend part3 = part1[1]                                                  cmd  ] clpcl.exe : 0 : Command succeeded.
+| extend part4 = split(part3, '] ')                                        cmd  ,clpcl.exe : 0 : Command succeeded.
+| extend module = part4[0]                                                 cmd 
+| extend message = part4[1]                                                clpcl.exe : 0 : Command succeeded.
+| extend part5 = split(part2, '  ')                                        2023/01/20 16:34:51.571,00000d40 00000d9c INFO
+| extend tmptime=replace_string(tostring(part5[0]),@'/','-')               2023-01-20 16:34:51.571
+| extend date_time = todatetime(tmptime)                                   1/20/2023 4:34:51.571 PM
+| extend part6 = split(part5[1], ' ')                                      00000d40,00000d9c,INFO
+| extend processID = part6[0]                                              00000d40
+| extend threadID = part6[1]                                               00000d9c
+| extend event = part6[2]                                                  INFO
+| project date_time, processID, threadID, event, module, message, Computer
+```
+Formatted Table Output:    
+`date_time [UTC]                   processID            threadID             event     module                message                                    Computer`
+`1/20/2023, 4:34:51.571 PM         00000d40             00000d9c             INFO      cmd                   clpcl.exe : 0 : Command succeeded.         ECX01`
+
