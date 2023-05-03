@@ -277,7 +277,7 @@ This workbook can be pinned for easy access and will automatically update as new
 ![Workbook](images/Installed%20Workbook.png)
 
 ### Parse User*.log contents into columns
-Here is a sample Kust query which can parse the ECX User*.log file into columns from a table. It shows how the line is broken up with each step.    
+Here is a sample Kusto query which can parse the ECX User*.log file into columns from a table. It shows how the line is broken up with each step.    
 Raw data input example:     `2023/01/20 16:34:51.571  00000d40 00000d9c INFO  [cmd  ] clpcl.exe : 0 : Command succeeded.`    
 ```
 ECXUserLog_CL
