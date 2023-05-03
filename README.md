@@ -116,4 +116,4 @@ Log query alert rules create an alert when a log query returns a particular resu
 
 ## Methods to analyze ECX log files in Azure
 
-1. Use **Azure Arc-enabled servers with Azure Monitor Agent**. Detailed instructions on creating Azure resources and configuring on-premises ECX VM servers for this solution can be found [here](Azure_Monitor_Agent.md). 
+1. Use **Azure Arc-enabled servers with Azure Monitor Agent**. Detailed instructions on creating Azure resources and configuring on-premises ECX VM servers for this solution can be found [here](Azure_Monitor_Agent_with_Azure_Arc.md). 
