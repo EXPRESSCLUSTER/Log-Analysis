@@ -273,5 +273,5 @@ Workbooks are also a good resource to use to view log data in a clean interface.
 9. At the **Save As** window, enter a meaningful **Title**, **Resource group**, and **Location**.
 10. Click **Apply**.
 11. Click **Done Editing**.    
-This workbook can be pinned for easy access and will automatically update as new log events are captured, with no need to run the query when it is opened. If there are no results in the windows, edit the Time Range.
+This workbook can be pinned for easy access and will automatically update as new log events are captured, with no need to run the query when it is opened. If there are no results in the windows, edit the Time Range. Take advantage of the functionality that [workbooks](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview) provide.
 ![Workbook](images/Installed%20Workbook.png)
