@@ -175,7 +175,12 @@ Once Azure starts collecting ECX logs, it is possible to create an Alert Rule to
     \*Note that you can test this query. If it does not return any results, adjust the **Time range**. Click **Continue Editing Alert** to close this window.
     - **Measurement**: leave **Measure** set to **Table rows**, **Aggregation type** set to **Count**, and **Aggregation granularity** set to **5 minutes**.
     - **Split by dimensions**    
-      \- **Resource ID column**: leave set to __ResourceId_.
+      \- **Resource ID column**: leave set to __ResourceId_.    
+      Set a Dimension to include the log file entry which triggered the alert in the email.    
+      \- **Dimension name**: **RawData**    
+      \- **Operator**: **=**    
+      \- **Dimension values**: **Select all**    
+      \- **Include all future values**: _Check box_    
     - **Alert logic**    
     \- **Operator**: **Greater than**    
     \- **Threshold value**: **0**    
