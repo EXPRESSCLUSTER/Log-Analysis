@@ -298,7 +298,7 @@ ECXUserLog_CL
 ```
 Formatted Table Output:    
 ```
-date_time [UTC]                   processID            threadID             event     module                message                                    Computer
-1/20/2023, 4:34:51.571 PM         00000d40             00000d9c             INFO      cmd                   clpcl.exe : 0 : Command succeeded.         ECX01
+date_time [UTC]               processID     threadID     event     module     message                                Computer
+1/20/2023, 4:34:51.571 PM     00000d40      00000d9c     INFO      cmd        clpcl.exe : 0 : Command succeeded.     ECX01
 ```
 
