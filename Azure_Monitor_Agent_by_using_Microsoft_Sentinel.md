@@ -32,6 +32,6 @@ When monitoring the operation of Microsoft Sentinel, you can issue an incident i
 Select "Post message to Teams" from "Playbook template" in Automation.
 Please confirm that "PostMessageTeams" has been created in the logic app.
 Since authentication to Microsoft Teams has not been established immediately after setting, set from the designer screen.
-
+![Enable-Post-message-to-Teams](images/imsge3-post-teams-rule.png)
 ## 2.Teams chanel settings
 Login to Microsoft Teams account and read the target team name and channel name in the logic app designer settings.
