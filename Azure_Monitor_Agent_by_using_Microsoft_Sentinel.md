@@ -26,5 +26,12 @@ Please refer to the [official document](https://learn.microsoft.com/ja-jp/azure/
 After setting the parameters, the Azure Monitor agent will be deployed in a few minutes, and you can check the Windows Security Event Log.
 
 # Alert Mail with Microsoft Teams by using Microsoft Sentinel
+When monitoring the operation of Microsoft Sentinel, you can issue an incident information alert to Microsoft Teams when a high incident occurs.
 
-## 1.
+## 1.Enable "Post message to Teams"
+Select "Post message to Teams" from "Playbook template" in Automation.
+Please confirm that "PostMessageTeams" has been created in the logic app.
+Since authentication to Microsoft Teams has not been established immediately after setting, set from the designer screen.
+
+## 2.Teams chanel settings
+Login to Microsoft Teams account and read the target team name and channel name in the logic app designer settings.
