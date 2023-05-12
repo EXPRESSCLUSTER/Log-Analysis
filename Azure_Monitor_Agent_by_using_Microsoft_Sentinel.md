@@ -35,3 +35,4 @@ Since authentication to Microsoft Teams has not been established immediately aft
 ![Enable-Post-message-to-Teams](images/imsge3-post-teams-rule.png)
 ## 2.Teams chanel settings
 Login to Microsoft Teams account and read the target team name and channel name in the logic app designer settings.
+## 3.
