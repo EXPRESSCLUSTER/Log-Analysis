@@ -35,4 +35,10 @@ Since authentication to Microsoft Teams has not been established immediately aft
 ![Enable-Post-message-to-Teams](images/imsge3-post-teams-rule.png)
 ## 2.Teams chanel settings
 Login to Microsoft Teams account and read the target team name and channel name in the logic app designer settings.
-## 3.
+## 3. Test
+I would check using the Microsoft Defender for Cloud sample alert feature for Microsoft Sentinel alert notifications.
+ #### 1. Enable the connector on the Microsoft Sentinel side.
+ #### 2. From Microsoft Defender for Cloud, generate a sample alert.
+ #### 3. On the Microsoft Teams side, you check for notifications.
+
+
