@@ -319,7 +319,7 @@ Azure Automation Hybrid Worker extension allows execution of runbooks directly o
 3. Create a runbook    
    - **Runbook type** set to PowerShell    
    - Add **PowerShell** commands and test
-4. Edit **Action group**:    
+4. Edit the **Action group** (used by an alert)    
    **Action type**: **Automation Runbook**    
    **Selected**: Runbook previously created    
       Configure Runbook    
