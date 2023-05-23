@@ -308,7 +308,8 @@ This tool can be used to automatically launch and execute machine customization 
 \*Note - An Azure storage account is required for the script.
 #### OpenSSH for Windows
 SSH for Arc-enabled servers enables SSH based connections to Arc-enabled servers without requiring a public IP address or additional open ports. This functionality can be used interactively, automated, or with existing SSH based tooling, allowing existing management tools to have a greater impact on Azure Arc-enabled servers. An administrator can connect to a server from anywhere.    
-See [SSH access to Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-overview?tabs=azure-cli)
+
+_See_ [SSH access to Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-overview?tabs=azure-cli)
 #### Azure Automation Windows Hybrid Worker
 Azure Automation Hybrid Worker extension allows execution of runbooks directly on an Azure or non-Azure machines including Arc-enabled Servers and Arc-enabled VMware VMs. A Hybrid Worker group with Hybrid Runbook Workers is designed for high availability and load balancing by allocating jobs across multiple Workers. Scripts can be scheduled or run on-demand. An alert can use an associated action group tor run a script in a runbook.    
 ##### Configure an alert to run an Azure Automation runbook
@@ -318,18 +319,19 @@ Azure Automation Hybrid Worker extension allows execution of runbooks directly o
    \*Note that when a non-Azure machine is added to the group the Hybrid Worker extension is installed automatically.    
    \*The script will only run on one worker in the group.
 3. Create a runbook    
-   - **Runbook type** set to PowerShell    
-   - Add **PowerShell** commands and test
+   **Runbook type** set to PowerShell    
+   Add **PowerShell** commands and test
 4. Edit the **Action group** (used by an alert)    
    **Action type**: **Automation Runbook**    
    **Selected**: Runbook previously created    
       Configure Runbook    
-      - **Runbook source**: **User**    
-      - **Automation account**: Automation account previously created    
-      - **Runbook**: Runbook previously created    
-        Configure parameters    
+      \- **Runbook source**: **User**    
+      \- **Automation account**: Automation account previously created    
+      \- **Runbook**: Runbook previously created    
+       Configure parameters    
        - **Run on**: **Hybrid Worker**    
        - **Choose Hybrid Worker group**: Hybrid worker group previously created    
-See [Use an alert to trigger an Azure Automation runbook](
+
+    _See_ [Use an alert to trigger an Azure Automation runbook](
 https://learn.microsoft.com/en-us/azure/automation/automation-create-alert-triggered-runbook?WT.mc_id=Portal-Microsoft_Azure_Automation)
 
