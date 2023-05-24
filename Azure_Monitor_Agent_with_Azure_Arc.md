@@ -335,3 +335,7 @@ Azure Automation Hybrid Worker extension allows execution of runbooks directly o
     _See_ [Use an alert to trigger an Azure Automation runbook](
 https://learn.microsoft.com/en-us/azure/automation/automation-create-alert-triggered-runbook?WT.mc_id=Portal-Microsoft_Azure_Automation)
 
+    Simple sample PowerShell script in Runbook.    
+    ![PowerShell Script](images/Runbook%20With%20Script.png)    
+    Output of PowerShell script from Azure runbook log.    
+    ![PowerShell Script](images/Runbook%20Output.png)
